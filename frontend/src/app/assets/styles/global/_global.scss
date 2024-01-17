@@ -1,0 +1,267 @@
+body {
+    background-color: $body-bg-color;
+    color: $fonts-color-base;
+    margin: 0;
+}
+
+p {
+    font-size: $fonts-size-text;
+    color: $fonts-color-base;
+    line-height: $line-heights-base;
+    font-weight: $fonts-weight-base;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: $h1-size;
+    font-weight: $h1-font-weight;
+    line-height: $h1-height;
+}
+
+h2 {
+    font-size: $h2-size;
+    font-weight: $h2-font-weight;
+    line-height: $h2-height;
+}
+
+h3 {
+    font-size: $h3-size;
+    font-weight: $h3-font-weight;
+    line-height: $h3-height;
+}
+
+h4 {
+    font-size: $h4-size;
+    font-weight: $h4-font-weight;
+    line-height: $h4-height;
+}
+
+h5 {
+    font-size: $h5-size;
+    font-weight: $h5-font-weight;
+    line-height: $h5-height;
+}
+
+h6 {
+    font-size: $h6-size;
+    font-weight: $h6-font-weight;
+    line-height: $h6-height;
+}
+
+a {
+    text-decoration: none;
+    color: $color-6;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        color: #d8b817;
+        outline: none;
+    }
+}
+
+.inner-wrap {
+    position: relative;
+    padding-top: $inner-wrap-spacing-top;
+    padding-bottom: $inner-wrap-spacing-bottom;
+}
+
+.description-wrap {
+    margin-top: $description-wrap-spacing-top;
+}
+
+.content-wrap {
+    margin-top: $content-wrap-spacing-top;
+}
+
+.button-primary {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: $spacing-xl;
+    min-width: 150px;
+    padding: 5px;
+
+    span {
+        position: relative;
+        display: inline-block;
+        font-size: $fonts-size-text;
+        // font-weight: bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        top: 0;
+        left: 0;
+        padding: 15px 20px;
+        transition: 0.3s;
+        color: $color-1;
+        background-color: $color-3;
+    }
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 10%;
+        height: 25%;
+        transition: 0.35s;
+        top: 0;
+        left: 0;
+        border-left: 1px solid $color-2;
+        border-top: 1px solid $color-2;
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        width: 10%;
+        height: 25%;
+        transition: 0.35s;
+        bottom: 0;
+        right: 0;
+        border-right: 1px solid $color-2;
+        border-bottom: 1px solid $color-2;
+    }
+
+    &:hover,&:focus{
+        span{
+            color: #ccc;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 10%;
+            height: 25%;
+            transition: 0.35s;
+            width: 99%;
+            height: 98%;
+        }
+    }
+}
+
+.button-secondary {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: $spacing-xl;
+    min-width: 150px;
+    padding: 5px;
+
+    span {
+        position: relative;
+        display: inline-block;
+        font-size: $fonts-size-text;
+        // font-weight: bold;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        top: 0;
+        left: 0;
+        padding: 15px 20px;
+        transition: 0.3s;
+        color: $color-3;
+        background-color: #ccc;
+    }
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 10%;
+        height: 25%;
+        transition: 0.35s;
+        top: 0;
+        left: 0;
+        border-left: 1px solid $color-2;
+        border-top: 1px solid $color-2;
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        width: 10%;
+        height: 25%;
+        transition: 0.35s;
+        bottom: 0;
+        right: 0;
+        border-right: 1px solid $color-2;
+        border-bottom: 1px solid $color-2;
+    }
+
+    &:hover,&:focus{
+        span{
+            color: #000;
+        }
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 10%;
+            height: 25%;
+            transition: 0.35s;
+            width: 99%;
+            height: 98%;
+        }
+    }
+}
+
+@media (max-width:991px) {
+
+    .inner-wrap {
+        padding-top: $inner-wrap-spacing-top-sm;
+        padding-bottom: $inner-wrap-spacing-bottom-sm;
+    }
+
+    .button-primary,.button-secondary{
+        margin-top: $spacing-l;
+        span{
+            font-size: $fonts-size-text-sm;
+        }
+    }
+
+    h1 {
+        font-size: $h1-size-sm;
+        line-height: $h1-height-sm;
+    }
+
+    h2 {
+        font-size: $h2-size-sm;
+        line-height: $h2-height-sm;
+    }
+
+    h3 {
+        font-size: $h3-size-sm;
+        line-height: $h3-height-sm;
+    }
+
+    h4 {
+        font-size: $h4-size-sm;
+        line-height: $h4-height-sm;
+    }
+
+    h5 {
+        font-size: $h5-size-sm;
+        line-height: $h5-height-sm;
+    }
+
+    h6 {
+        font-size: $h6-size-sm;
+        line-height: $h6-height-sm;
+    }
+}
