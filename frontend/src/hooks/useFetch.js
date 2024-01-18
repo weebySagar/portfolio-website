@@ -20,15 +20,7 @@ const useFetch = (url,options) => {
                 setIsLoading(false)
             }
         }
-        // try {
-        //     axios.get(url).then(response=>setData(response.data.data.attributes));
-            
-        // } catch (error) {
-        //     setError(error)
-        // }
-        // finally{
-        //     setIsLoading(false)
-        // }
+
         fetchData();
     },[url,options]);
 

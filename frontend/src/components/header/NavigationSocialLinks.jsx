@@ -9,14 +9,6 @@ const NavigationSocialLinks = ({ socialLinks }) => {
           <div className={social.SocialName}></div>
         </Link>
       ))}
-
-      {/* <Link href='/'>
-            <div className='linkedin'></div>
-        </Link><Link href='/'>
-            <div className='github'></div>
-        </Link><Link href='/'>
-            <div className='instagram'></div>
-        </Link> */}
     </div>
   );
 };
