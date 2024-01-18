@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import "./assets/styles/global/_global.scss";
+import "@/styles/global/_global.scss";
 
 import Link from 'next/link'
 
@@ -11,14 +11,14 @@ export default function Home() {
       <Link href='/'>Home</Link>
      
 <br />
-  <button class="button-primary">
+  <button className="button-primary">
     <span>hover me 3</span>
   </button>
 
   <br />
 
 
-  <button class="button-secondary">
+  <button className="button-secondary">
     <span>hover me 3</span>
   </button>
     </>

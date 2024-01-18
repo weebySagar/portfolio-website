@@ -368,6 +368,7 @@ export interface ApiHeaderHeader extends Schema.SingleType {
     singularName: 'header';
     pluralName: 'headers';
     displayName: 'Header';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -375,6 +376,10 @@ export interface ApiHeaderHeader extends Schema.SingleType {
   attributes: {
     NavigationMenu: Attribute.Component<'navigationmenu.navigation-menu', true>;
     NavigationBrand: Attribute.Component<'navigationbrandlogo.navigation-brand-logo'>;
+    SocialLinks: Attribute.Component<
+      'navigation-social-links.social-links',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
