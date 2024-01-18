@@ -4,7 +4,8 @@
   "info": {
     "singularName": "header",
     "pluralName": "headers",
-    "displayName": "Header"
+    "displayName": "Header",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,6 +21,11 @@
       "type": "component",
       "repeatable": false,
       "component": "navigationbrandlogo.navigation-brand-logo"
+    },
+    "SocialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigation-social-links.social-links"
     }
   }
 }

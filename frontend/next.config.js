@@ -7,7 +7,7 @@ const nextConfig = {
         prependData: `@import "/src/app/assets/styles/global/_theme-variables.scss";`
     },
     images:{
-        domains:['assets-global.website-files.com']
+        domains:['assets-global.website-files.com',"res.cloudinary.com"]
     }
 }
 
