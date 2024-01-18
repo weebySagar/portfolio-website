@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_navigationmenu_navigation_menus",
+  "info": {
+    "displayName": "Navigation Menu",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Link": {
+      "type": "string",
+      "required": true
+    },
+    "Logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
