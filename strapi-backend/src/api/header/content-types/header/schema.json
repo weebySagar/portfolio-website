@@ -1,42 +1,25 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "headers",
   "info": {
     "singularName": "header",
     "pluralName": "headers",
-    "displayName": "Header",
-    "description": ""
+    "displayName": "Header"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Link": {
-      "type": "string",
-      "required": true,
-      "default": "/"
+    "NavigationMenu": {
+      "type": "component",
+      "repeatable": true,
+      "component": "navigationmenu.navigation-menu"
     },
-    "Icon": {
-      "type": "media",
-      "multiple": false,
-      "required": true,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "BrandLogoURL": {
-      "type": "string",
-      "required": true,
-      "default": "/"
-    },
-    "BrandLogoImage": {
-      "allowedTypes": [
-        "images"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+    "NavigationBrand": {
+      "type": "component",
+      "repeatable": false,
+      "component": "navigationbrandlogo.navigation-brand-logo"
     }
   }
 }

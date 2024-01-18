@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_navigationbrandlogo_navigation_brand_logos",
+  "info": {
+    "displayName": "Navigation Brand Logo"
+  },
+  "options": {},
+  "attributes": {
+    "Link": {
+      "type": "string",
+      "required": true,
+      "default": "/"
+    },
+    "BrandLogo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}
