@@ -12,7 +12,7 @@ export default function Home() {
      
 <br />
   <button className="button-primary">
-    <span>hover me 3</span>
+    <span>Return home</span>
   </button>
 
   <br />
