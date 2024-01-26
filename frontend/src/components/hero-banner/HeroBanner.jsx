@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Markdown from "react-markdown";
 
 import { findValueByKey } from "@/utils/helper";
 import Typewriter from "@/components/typewriter/Typewriter";
@@ -25,7 +24,7 @@ export default async function HeroBanner() {
   const data = await getHeroDetails();
 
   return (
-    <section className="hero-banner vh-100">
+    <section className="hero-banner vh-100" style={{backgroundImage:`url(${findValueByKey(data,'BackgroundImage').url})`}}>
       <div className="hero-banner-inner">
         <div className="container">
           <div className="row align-items-center">

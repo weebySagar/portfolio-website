@@ -33,8 +33,13 @@
       "repeatable": true,
       "component": "hero-banner-subtitle.hero-banner-subtitle"
     },
-    "RichText": {
-      "type": "richtext"
+    "BackgroundImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
