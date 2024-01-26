@@ -26,7 +26,6 @@ export default async function HeroBanner() {
 
   return (
     <section className="hero-banner vh-100">
-      {/* <div className="inner-wrap"> */}
       <div className="hero-banner-inner">
         <div className="container">
           <div className="row align-items-center">
@@ -35,10 +34,7 @@ export default async function HeroBanner() {
                 <Typewriter data={data}/>
               </div>
               <div className="title-wrap">
-                <h1 >
-                  <Markdown>
-                    {data.RichText}
-                  </Markdown>
+                <h1 dangerouslySetInnerHTML={{__html:data.Title}} >
                 </h1>
               </div>
 
@@ -56,7 +52,6 @@ export default async function HeroBanner() {
         </div>
       </div>
 
-      {/* </div> */}
     </section>
   );
 }
