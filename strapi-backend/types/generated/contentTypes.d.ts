@@ -398,6 +398,44 @@ export interface ApiHeaderHeader extends Schema.SingleType {
   };
 }
 
+export interface ApiHeroBannerHeroBanner extends Schema.SingleType {
+  collectionName: 'hero_banners';
+  info: {
+    singularName: 'hero-banner';
+    pluralName: 'hero-banners';
+    displayName: 'Hero Banner';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Description: Attribute.Text & Attribute.Required;
+    BannerImage: Attribute.Media;
+    Subtitle: Attribute.Component<
+      'hero-banner-subtitle.hero-banner-subtitle',
+      true
+    >;
+    RichText: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hero-banner.hero-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hero-banner.hero-banner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -815,6 +853,7 @@ declare module '@strapi/types' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'api::header.header': ApiHeaderHeader;
+      'api::hero-banner.hero-banner': ApiHeroBannerHeroBanner;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;

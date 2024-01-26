@@ -1,5 +1,15 @@
 import type { Schema, Attribute } from '@strapi/strapi';
 
+export interface HeroBannerSubtitleHeroBannerSubtitle extends Schema.Component {
+  collectionName: 'components_hero_banner_subtitle_hero_banner_subtitles';
+  info: {
+    displayName: 'Hero Banner Subtitle';
+  };
+  attributes: {
+    Subtitle: Attribute.String;
+  };
+}
+
 export interface NavigationSocialLinksSocialLinks extends Schema.Component {
   collectionName: 'components_navigation_social_links_social_links';
   info: {
@@ -38,6 +48,7 @@ export interface NavigationmenuNavigationMenu extends Schema.Component {
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
+      'hero-banner-subtitle.hero-banner-subtitle': HeroBannerSubtitleHeroBannerSubtitle;
       'navigation-social-links.social-links': NavigationSocialLinksSocialLinks;
       'navigationbrandlogo.navigation-brand-logo': NavigationbrandlogoNavigationBrandLogo;
       'navigationmenu.navigation-menu': NavigationmenuNavigationMenu;

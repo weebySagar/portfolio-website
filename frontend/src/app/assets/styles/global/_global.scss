@@ -1,9 +1,10 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
+// @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css");
 
 body {
     background-color: $body-bg-color;
     color: $fonts-color-base;
     margin: 0;
+    // scroll-behavior: smooth;
 }
 
 p {
@@ -85,6 +86,13 @@ a {
 
 .content-wrap {
     margin-top: $content-wrap-spacing-top;
+}
+
+.title-wrap{
+    
+    span{
+        color: $color-2;
+    }
 }
 
 .button-primary {

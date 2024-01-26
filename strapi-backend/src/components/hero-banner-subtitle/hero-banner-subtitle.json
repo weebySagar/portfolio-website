@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_hero_banner_subtitle_hero_banner_subtitles",
+  "info": {
+    "displayName": "Hero Banner Subtitle"
+  },
+  "options": {},
+  "attributes": {
+    "Subtitle": {
+      "type": "string"
+    }
+  }
+}

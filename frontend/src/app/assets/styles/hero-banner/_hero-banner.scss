@@ -1,0 +1,22 @@
+.hero-banner{
+    position: relative;
+
+    .hero-banner-inner{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .subtitle{
+        span{
+            color: $color-6;
+            font-size: 18px;
+
+            &::after{
+                color: $color-1;
+            }
+        }
+    }
+}
