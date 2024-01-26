@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_my_skills_my_skills",
+  "info": {
+    "displayName": "My Skills",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
