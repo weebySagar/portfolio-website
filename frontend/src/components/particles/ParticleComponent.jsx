@@ -1,31 +1,10 @@
 "use client";
 
-import React, { useCallback, useMemo } from "react";
-import { loadFull } from "tsparticles";
-import { loadSlim } from "@tsparticles/slim";
+import React from "react";
 import Particles from "react-tsparticles";
 
 const ParticleComponent = () => {
-  const options = useMemo(() => {
-    return {
-      particles: {
-        links: {},
-        move: {
-          enable: true,
-          zIndex: 0,
-        },
-      },
-    };
-  }, []);
-
-  const particlesInit = useCallback(async (engine) => {
-    //    await loadSlim(engine)
-    await loadFull(engine);
-  }, []);
-
-  const particlesLoaded = useCallback(async (container) => {
-    //console.log(container);
-  }, []);
+ 
   return (
     <Particles
       id="tsparticles"
