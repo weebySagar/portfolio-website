@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "my_skills",
+  "info": {
+    "singularName": "my-skill",
+    "pluralName": "my-skills",
+    "displayName": "My Skill",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Skill": {
+      "displayName": "My Skills",
+      "type": "component",
+      "repeatable": true,
+      "component": "my-skills.my-skills"
+    }
+  }
+}

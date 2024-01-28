@@ -1,0 +1,41 @@
+.myskills {
+    height: calc(100vh - 110px);
+
+    .stack {
+        height: 70vh;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .wrapper {
+            background: #f9fafb;
+            width: 300px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            cursor: grab;
+
+            img{
+                pointer-events: none;
+            }
+        }
+    }
+
+}
+
+@media (max-width:767px){
+    .myskills{
+        .stack{
+            .wrapper{
+                height: 250px;
+                width: 200px;
+            }
+        }
+    }
+}

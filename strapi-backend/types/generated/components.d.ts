@@ -10,6 +10,18 @@ export interface HeroBannerSubtitleHeroBannerSubtitle extends Schema.Component {
   };
 }
 
+export interface MySkillsMySkills extends Schema.Component {
+  collectionName: 'components_my_skills_my_skills';
+  info: {
+    displayName: 'My Skills';
+    description: '';
+  };
+  attributes: {
+    Name: Attribute.String;
+    Image: Attribute.Media;
+  };
+}
+
 export interface NavigationSocialLinksSocialLinks extends Schema.Component {
   collectionName: 'components_navigation_social_links_social_links';
   info: {
@@ -49,6 +61,7 @@ declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'hero-banner-subtitle.hero-banner-subtitle': HeroBannerSubtitleHeroBannerSubtitle;
+      'my-skills.my-skills': MySkillsMySkills;
       'navigation-social-links.social-links': NavigationSocialLinksSocialLinks;
       'navigationbrandlogo.navigation-brand-logo': NavigationbrandlogoNavigationBrandLogo;
       'navigationmenu.navigation-menu': NavigationmenuNavigationMenu;
