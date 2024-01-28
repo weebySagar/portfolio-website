@@ -9,7 +9,7 @@ const StackWrapper = ({data}) => {
     <Stack onVote={(item,vote)=>console.log(item.props,vote)}>
               {data.map((obj,index) => (
                 <div className="wrapper" style={{
-                  transform: `rotate(${index * 5}deg)`
+                  transform: `rotate(${index % 2== 0 ?  index * 5: index * -5}deg)`
                 }}
                 key={obj.id}
                 title={obj.Name}
