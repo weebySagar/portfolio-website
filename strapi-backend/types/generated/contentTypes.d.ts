@@ -823,7 +823,7 @@ export interface ApiHeroBannerHeroBanner extends Schema.SingleType {
       'hero-banner-subtitle.hero-banner-subtitle',
       true
     >;
-    RichText: Attribute.RichText;
+    BackgroundImage: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
