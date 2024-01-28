@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 crossOrigin="anonymous" />
       </head>
-      <body className={outfit.className} style={{height:'300vh'}}>
+      <body className={outfit.className}>
         <Header/>
         {/* <SmoothScrolling> */}
 

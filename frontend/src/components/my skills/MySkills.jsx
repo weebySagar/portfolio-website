@@ -26,7 +26,7 @@ export default async function MySkills() {
 
   return (
     <section className="myskills">
-      <div className="inner-wrapper">
+      <div className="inner-wrap">
         <div className="container">
           <div className="title-wrap">
             <h1>My Skills</h1>
