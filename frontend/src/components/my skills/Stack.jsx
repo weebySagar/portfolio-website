@@ -1,7 +1,9 @@
 "use client";
 import React, { Children, useState } from "react";
+import {motion} from 'framer-motion'
 
 import Card from "./Card";
+import Link from "next/link";
 
 const Stack = ({ onVote, children, ...props }) => {
   const [stack, setStack] = useState(Children.toArray(children));
@@ -29,7 +31,9 @@ const Stack = ({ onVote, children, ...props }) => {
        
       }}
     >
-      {stack.map((item, index) => {
+      {
+      stack.length > 0 ? 
+      stack.map((item, index) => {
         let isTop = index === stack.length - 1;
         return (
           <Card
@@ -40,7 +44,18 @@ const Stack = ({ onVote, children, ...props }) => {
             {item}
           </Card>
         );
-      })}
+      })
+    :
+    <motion.div className="skills-message" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:5}}>
+      <div className="title-wrap">
+      <h3>"why settle for ordinary when you can code <span>extraordinary?</span>"</h3>
+
+      </div>
+      <div className="button-wrap">
+        <Link href='/projects' className="button-primary"><span>Wanna see my projects?</span></Link>
+      </div>
+    </motion.div>
+    }
     </div>
   );
 };
