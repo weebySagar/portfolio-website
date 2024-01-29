@@ -57,6 +57,18 @@ export interface NavigationmenuNavigationMenu extends Schema.Component {
   };
 }
 
+export interface TechnologyUsedTechnologyUsed extends Schema.Component {
+  collectionName: 'components_technology_used_technology_useds';
+  info: {
+    displayName: 'Technology Used';
+    description: '';
+  };
+  attributes: {
+    Skill: Attribute.String;
+    Image: Attribute.Media;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -65,6 +77,7 @@ declare module '@strapi/types' {
       'navigation-social-links.social-links': NavigationSocialLinksSocialLinks;
       'navigationbrandlogo.navigation-brand-logo': NavigationbrandlogoNavigationBrandLogo;
       'navigationmenu.navigation-menu': NavigationmenuNavigationMenu;
+      'technology-used.technology-used': TechnologyUsedTechnologyUsed;
     }
   }
 }

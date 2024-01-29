@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_technology_used_technology_useds",
+  "info": {
+    "displayName": "Technology Used",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Skill": {
+      "type": "string"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

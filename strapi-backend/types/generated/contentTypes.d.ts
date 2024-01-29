@@ -873,6 +873,44 @@ export interface ApiMySkillMySkill extends Schema.SingleType {
   };
 }
 
+export interface ApiProjectProject extends Schema.CollectionType {
+  collectionName: 'projects';
+  info: {
+    singularName: 'project';
+    pluralName: 'projects';
+    displayName: 'Projects';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ProjectName: Attribute.String & Attribute.Required;
+    Image: Attribute.Media;
+    Link: Attribute.String & Attribute.Required;
+    Description: Attribute.Text;
+    TechnologyUsed: Attribute.Component<
+      'technology-used.technology-used',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::project.project',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -894,6 +932,7 @@ declare module '@strapi/types' {
       'api::header.header': ApiHeaderHeader;
       'api::hero-banner.hero-banner': ApiHeroBannerHeroBanner;
       'api::my-skill.my-skill': ApiMySkillMySkill;
+      'api::project.project': ApiProjectProject;
     }
   }
 }
