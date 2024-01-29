@@ -1,0 +1,82 @@
+@import "../global/theme-variables";
+
+.project-section{
+
+    .project-slider{
+
+        height: 250vh;
+
+        .sticky-div{
+            top: 30%;
+            position: sticky;
+        }
+        .project-card{
+                width: 100%;
+            .img-wrap{
+                padding: 5px;
+                border: 2px solid white;
+                border-radius: 20px;
+                overflow: hidden;
+
+                img{
+                    border-radius: 20px;
+                }
+            }
+            p{
+                color: #CCC;
+            }
+
+            h5{
+                margin-top: $spacing-m;
+            }
+
+            .technology-wrapper{
+                margin-top: $spacing-m;
+                gap: 10px;
+                .tech-badge{
+                    display: flex;
+                    align-items: center;
+                    border: 2px dashed $color-2;
+                    padding: 4px 10px;
+                    border-radius: 8px;
+                    gap: 10px;
+                }
+            }
+        }
+        .slick-slide{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .slick-arrow{
+            &.slick-next,&.slick-prev{
+                height: 50px;
+                width: 50px;
+                &::before{
+                    font-size: 40px;    
+                    color: $color-2;
+                }
+            }
+
+            &.slick-next{
+                right: 10px;
+            }
+
+            &.slick-prev{
+                left: 10px;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+@media (max-width:991px){
+    .project-section{
+        .project-slider{
+            height: auto;
+            .sticky-div{
+                top: 100px;
+            }
+        }
+    }
+}
