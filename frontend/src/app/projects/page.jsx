@@ -4,9 +4,9 @@ import Project from '@/components/project/Project';
 
 const ProjectsPage = () => {
   return (
-    <>
+    <main>
     <Project/>
-    </>
+    </main>
   )
 }
 

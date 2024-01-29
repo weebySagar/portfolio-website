@@ -25,9 +25,7 @@ crossOrigin="anonymous" />
         <Header/>
         {/* <SmoothScrolling> */}
 
-       <main>
          {children}
-        </main>
 
         <footer style={{height:"100vh",background:"black"}}>
           <h1>footer</h1>
