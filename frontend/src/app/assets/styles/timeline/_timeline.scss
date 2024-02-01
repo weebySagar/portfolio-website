@@ -1,0 +1,166 @@
+.timeline {
+    position: relative;
+
+    .timeline-wrapper {
+        padding: 60px 0;
+
+    }
+
+    .timeline-border {
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-1;
+    }
+
+    .timeline-content,
+    .timeline-company {
+        width: 46%;
+
+        p {
+            margin-top: 0;
+        }
+
+        li {
+            opacity: 0.7;
+
+        }
+
+    }
+
+    .timeline-company {
+        text-align: right;
+
+        h5,
+        p {
+            margin-right: 20px;
+
+        }
+
+        h5 {
+            display: inline-block;
+        }
+
+        p {
+            color: $color-6;
+        }
+
+
+        &::before {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            content: "";
+            height: 50px;
+            width: 50px;
+            background-color: $color-2;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 4px solid $color-5;
+        }
+
+        &::after {
+            position: absolute;
+            left: 49%;
+
+            top: 50%;
+            content: "";
+            height: 2px;
+            width: 50px;
+            background-color: $color-2;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    .timeline-content {
+        margin-bottom: $spacing-xl;
+        text-align: left;
+    }
+
+    .timeline-item {
+
+        &:last-child {
+            .timeline-content {
+                margin-bottom: 0;
+            }
+        }
+
+        &:nth-child(2n) {
+            flex-direction: row-reverse;
+
+            .timeline-company {
+
+                &::after {
+                    left: 51%;
+                }
+            }
+
+            .timeline-company {
+                text-align: left;
+
+                h5,
+                p {
+
+                    margin-left: 20px;
+                    margin-right: 0 !important;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media (max-width:767px) {
+    .timeline {
+
+        .timeline-wrapper {
+            padding: 50px 0;
+        }
+
+        .timeline-border {
+            left: 0px;
+        }
+
+        .timeline-item {
+            padding: 0 30px;
+        }
+
+        .timeline-company {
+
+            margin-bottom: $spacing-xl;
+
+            &::before {
+                left: 0;
+                top: 20px;
+                height: 30px;
+                width: 30px;
+            }
+
+            &::after {
+                left: 0 !important;
+                top: 20px;
+                width: 25px;
+                transform: none;
+            }
+
+            h5,
+            p {
+                margin: 0 !important;
+                text-align: left !important;
+                display: block;
+
+            }
+        }
+
+
+        .timeline-content,
+        .timeline-company {
+            width: 100%;
+            text-align: left;
+        }
+    }
+}

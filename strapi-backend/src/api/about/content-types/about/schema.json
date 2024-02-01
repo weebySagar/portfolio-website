@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "abouts",
+  "info": {
+    "singularName": "about",
+    "pluralName": "abouts",
+    "displayName": "About",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Introduction": {
+      "displayName": "Introduction",
+      "type": "component",
+      "repeatable": false,
+      "component": "introduction.introduction"
+    },
+    "Timeline": {
+      "displayName": "Timeline",
+      "type": "component",
+      "repeatable": true,
+      "component": "timeline.timeline"
+    }
+  }
+}
