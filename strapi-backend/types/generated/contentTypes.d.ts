@@ -782,6 +782,7 @@ export interface ApiAboutAbout extends Schema.CollectionType {
   attributes: {
     Introduction: Attribute.Component<'introduction.introduction'>;
     Timeline: Attribute.Component<'timeline.timeline', true>;
+    Resume: Attribute.Component<'resume.resume'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

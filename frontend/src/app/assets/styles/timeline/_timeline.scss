@@ -47,6 +47,11 @@
             color: $color-6;
         }
 
+        .duration{
+            color: #CCC !important;
+            font-size: 16px !important;
+        }
+
 
         &::before {
             position: absolute;
@@ -151,6 +156,9 @@
             p {
                 margin: 0 !important;
                 text-align: left !important;
+            }
+
+            p{
                 display: block;
 
             }

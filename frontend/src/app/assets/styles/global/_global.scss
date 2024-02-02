@@ -296,6 +296,10 @@ ul{
         margin-top: $spacing-l;
     }
 
+    .row{
+        row-gap: 50px;
+    }
+
     .button-primary,.button-secondary{
         margin-top: $spacing-l;
         span{

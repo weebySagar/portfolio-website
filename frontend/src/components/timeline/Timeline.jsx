@@ -6,7 +6,7 @@ import "@/styles/timeline/_timeline.scss";
 
 const Timeline = ({ timeline }) => {
   return (
-    <div className="timeline">
+    <section className="timeline">
       <div className="inner-wrap">
         <div className="container">
           <div className="title-wrap">
@@ -28,8 +28,9 @@ const Timeline = ({ timeline }) => {
                     ) : (
                       <h5>{t.CompanyName}</h5>
                     )}
+                 { t.JobRole &&  <p>{t.JobRole}</p>}
 
-                    <p>{t.WorkDuration}</p>
+                    <p className="duration">{t.WorkDuration}</p>
                   </div>
                   <div className="timeline-content">
                     <Markdown>{t.Content}</Markdown>
@@ -40,7 +41,7 @@ const Timeline = ({ timeline }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

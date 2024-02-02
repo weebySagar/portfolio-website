@@ -4,6 +4,8 @@ import "@/styles/about/_about.scss";
 import Timeline from "@/components/timeline/Timeline";
 import Intro from "@/components/Intro/Intro";
 import { findValueByKey } from "@/utils/helper";
+import Academics from "@/components/academics/Academics";
+import Resume from "@/components/resume/Resume";
 
 async function getAboutDetails() {
   try {
@@ -28,6 +30,8 @@ export default async function AboutPage() {
       <section className="about">
         <Intro {...data.Introduction} ImageData={data.Introduction}/>
         <Timeline timeline={data.Timeline} />
+        <Academics/>
+        <Resume resume={data.Resume}/>
       </section>
     </main>
   );

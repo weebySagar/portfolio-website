@@ -20,6 +20,9 @@
     },
     "Tooltip": {
       "type": "richtext"
+    },
+    "JobRole": {
+      "type": "string"
     }
   }
 }

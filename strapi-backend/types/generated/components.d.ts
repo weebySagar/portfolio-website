@@ -70,6 +70,20 @@ export interface NavigationmenuNavigationMenu extends Schema.Component {
   };
 }
 
+export interface ResumeResume extends Schema.Component {
+  collectionName: 'components_resume_resumes';
+  info: {
+    displayName: 'Resume';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Description: Attribute.Text;
+    File: Attribute.Media;
+    BackgroundImage: Attribute.Media;
+  };
+}
+
 export interface TechnologyUsedTechnologyUsed extends Schema.Component {
   collectionName: 'components_technology_used_technology_useds';
   info: {
@@ -93,6 +107,7 @@ export interface TimelineTimeline extends Schema.Component {
     Content: Attribute.RichText & Attribute.Required;
     WorkDuration: Attribute.String & Attribute.Required;
     Tooltip: Attribute.RichText;
+    JobRole: Attribute.String;
   };
 }
 
@@ -105,6 +120,7 @@ declare module '@strapi/types' {
       'navigation-social-links.social-links': NavigationSocialLinksSocialLinks;
       'navigationbrandlogo.navigation-brand-logo': NavigationbrandlogoNavigationBrandLogo;
       'navigationmenu.navigation-menu': NavigationmenuNavigationMenu;
+      'resume.resume': ResumeResume;
       'technology-used.technology-used': TechnologyUsedTechnologyUsed;
       'timeline.timeline': TimelineTimeline;
     }

@@ -1,0 +1,20 @@
+@import "../global/theme-variables";
+
+.resume{
+    // background-color: $color-4;
+    position: relative;
+    // background-image: url('/bg3.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .react-pdf__Page__canvas{
+        height: 100% !important;
+        width: 100% !important;
+    }
+
+    .resume-wrapper{
+        border: 2px solid $color-2;
+        padding: 5px;
+    }
+}
