@@ -2,12 +2,17 @@
 const path = require('path');
 
 const nextConfig = {
-    sassOptions:{
-        includePaths:[path.join(__dirname,'app/assets/styles')],
+    sassOptions: {
+        includePaths: [path.join(__dirname, 'app/assets/styles')],
         prependData: `@import "/src/app/assets/styles/global/_theme-variables.scss";`
     },
-    images:{
-        domains:['assets-global.website-files.com',"res.cloudinary.com"]
+    images: {
+        domains: ['assets-global.website-files.com', "res.cloudinary.com"]
+    },
+    webpack: (config) => {
+        config.resolve.alias.canvas = false;
+
+        return config;
     }
 }
 

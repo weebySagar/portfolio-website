@@ -78,6 +78,12 @@ main{
     margin-top: 110px;
 }
 
+ul{
+    li{
+        margin-bottom: 10px;
+    }
+}
+
 .inner-wrap {
     position: relative;
     padding-top: $inner-wrap-spacing-top;
@@ -90,6 +96,7 @@ main{
 
 .content-wrap {
     margin-top: $content-wrap-spacing-top;
+    position: relative;
 }
 
 .title-wrap{
@@ -261,6 +268,23 @@ main{
     z-index: 100;
 }
 
+.tooltip{
+    .tooltip-inner{
+        display: flex !important;
+        align-items: center;
+
+        h6{
+
+            font-size: 14px !important;
+            line-height: normal !important;
+        }
+
+        p{
+            margin-top: 0;
+        }
+    }
+}
+
 @media (max-width:991px) {
 
     .inner-wrap {
@@ -270,6 +294,10 @@ main{
 
     .content-wrap {
         margin-top: $spacing-l;
+    }
+
+    .row{
+        row-gap: 50px;
     }
 
     .button-primary,.button-secondary{

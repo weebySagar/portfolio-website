@@ -10,6 +10,19 @@ export interface HeroBannerSubtitleHeroBannerSubtitle extends Schema.Component {
   };
 }
 
+export interface IntroductionIntroduction extends Schema.Component {
+  collectionName: 'components_introduction_introductions';
+  info: {
+    displayName: 'Introduction';
+  };
+  attributes: {
+    Title: Attribute.String & Attribute.Required;
+    Subtitle: Attribute.String;
+    Description: Attribute.Text & Attribute.Required;
+    Image: Attribute.Media;
+  };
+}
+
 export interface MySkillsMySkills extends Schema.Component {
   collectionName: 'components_my_skills_my_skills';
   info: {
@@ -57,6 +70,20 @@ export interface NavigationmenuNavigationMenu extends Schema.Component {
   };
 }
 
+export interface ResumeResume extends Schema.Component {
+  collectionName: 'components_resume_resumes';
+  info: {
+    displayName: 'Resume';
+    description: '';
+  };
+  attributes: {
+    Title: Attribute.String;
+    Description: Attribute.Text;
+    File: Attribute.Media;
+    BackgroundImage: Attribute.Media;
+  };
+}
+
 export interface TechnologyUsedTechnologyUsed extends Schema.Component {
   collectionName: 'components_technology_used_technology_useds';
   info: {
@@ -69,15 +96,33 @@ export interface TechnologyUsedTechnologyUsed extends Schema.Component {
   };
 }
 
+export interface TimelineTimeline extends Schema.Component {
+  collectionName: 'components_timeline_timelines';
+  info: {
+    displayName: 'Timeline';
+    description: '';
+  };
+  attributes: {
+    CompanyName: Attribute.String & Attribute.Required;
+    Content: Attribute.RichText & Attribute.Required;
+    WorkDuration: Attribute.String & Attribute.Required;
+    Tooltip: Attribute.RichText;
+    JobRole: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'hero-banner-subtitle.hero-banner-subtitle': HeroBannerSubtitleHeroBannerSubtitle;
+      'introduction.introduction': IntroductionIntroduction;
       'my-skills.my-skills': MySkillsMySkills;
       'navigation-social-links.social-links': NavigationSocialLinksSocialLinks;
       'navigationbrandlogo.navigation-brand-logo': NavigationbrandlogoNavigationBrandLogo;
       'navigationmenu.navigation-menu': NavigationmenuNavigationMenu;
+      'resume.resume': ResumeResume;
       'technology-used.technology-used': TechnologyUsedTechnologyUsed;
+      'timeline.timeline': TimelineTimeline;
     }
   }
 }

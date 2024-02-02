@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_timeline_timelines",
+  "info": {
+    "displayName": "Timeline",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "CompanyName": {
+      "type": "string",
+      "required": true
+    },
+    "Content": {
+      "type": "richtext",
+      "required": true
+    },
+    "WorkDuration": {
+      "type": "string",
+      "required": true
+    },
+    "Tooltip": {
+      "type": "richtext"
+    },
+    "JobRole": {
+      "type": "string"
+    }
+  }
+}
