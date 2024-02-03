@@ -807,6 +807,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
     singularName: 'footer';
     pluralName: 'footers';
     displayName: 'Footer';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -817,6 +818,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
       'navigation-social-links.social-links',
       true
     >;
+    BackgroundImage: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

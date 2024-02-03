@@ -3,6 +3,7 @@ import React from "react";
 import "@/styles/footer/_footer.scss";
 import FooterSocialIcons from "./FooterSocialIcons";
 import ContactForm from "./ContactForm";
+import { findValueByKey } from "@/utils/helper";
 
 async function getFooterDetails() {
     try {
@@ -23,7 +24,7 @@ const Footer =async () => {
     const data  = await getFooterDetails();
 
   return (
-    <footer>
+    <footer style={{backgroundImage: `url(${findValueByKey(data,'BackgroundImage')?.url})`}}>
       <div className="bgimage"></div>
       <div className="overlay"></div>
       <div className="inner-wrap">
