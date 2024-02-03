@@ -101,8 +101,7 @@ const ContactForm = () => {
             />
             {errors.message && <p className="text-danger">{errors.message}</p>}
           </div>
-          <button type="submit" className="btn btn-primary">
-            {" "}
+          <button type="submit" className="btn btn-primary mt-5">
             Send
           </button>
         </form>

@@ -1,11 +1,27 @@
 import React from "react";
 
 import "@/styles/footer/_footer.scss";
-import Link from "next/link";
 import FooterSocialIcons from "./FooterSocialIcons";
 import ContactForm from "./ContactForm";
 
-const Footer = () => {
+async function getFooterDetails() {
+    try {
+      const response = await fetch(
+        "http://127.0.0.1:1337/api/footer?populate=deep"
+      );
+      if (!response.ok) {
+        throw new Error("Failed to fetch data in footer");
+      }
+      const { data } = await response.json();
+      return data?.attributes;
+    } catch (error) {
+      throw new Error(error);
+    }
+  }
+
+const Footer =async () => {
+    const data  = await getFooterDetails();
+
   return (
     <footer>
       <div className="bgimage"></div>
@@ -16,12 +32,11 @@ const Footer = () => {
             <div className="row">
               <div className="col-12 col-md-5 col-lg-6">
                 <div className="title-wrap">
-                  <h1>
-                    Get in <span>Touch.</span>
+                  <h1 dangerouslySetInnerHTML={{__html:data.Title}}>
                   </h1>
                 </div>
                 <div className="content-wrap">
-                    <FooterSocialIcons/>
+                    <FooterSocialIcons socialLinks={data.SocialLinks}/>
                 </div>
               </div>
               <div className="col-12 col-md-7 col-lg-6">
