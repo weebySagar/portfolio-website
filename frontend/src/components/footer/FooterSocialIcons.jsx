@@ -5,7 +5,7 @@ const FooterSocialIcons = ({ socialLinks }) => {
   return (
     <div className="footer-social-links">
       {socialLinks.map((social) => (
-        <div>
+        <div key={social.id}>
           <Link href={social.Link} target="_blank">
             <div className={social.SocialName}>
               <span className="text-capitalize">{social.SocialName}</span>
