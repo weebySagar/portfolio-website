@@ -6,7 +6,7 @@ import PdfViewer from "@/components/pdf viewer/PdfViewer";
 
 const Resume = ({ resume }) => {
   return (
-    <section className="resume text-start" style={{backgroundImage:`url(${findValueByKey(resume,"BackgroundImage").url})`}}>
+    <section className="resume text-start" style={{backgroundImage:`url(${findValueByKey(resume,"BackgroundImage")?.url})`}}>
       <div className="inner-wrap">
         <div className="container">
           <div className="row">

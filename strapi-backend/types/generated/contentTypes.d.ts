@@ -801,6 +801,42 @@ export interface ApiAboutAbout extends Schema.CollectionType {
   };
 }
 
+export interface ApiFooterFooter extends Schema.SingleType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    Title: Attribute.String;
+    SocialLinks: Attribute.Component<
+      'navigation-social-links.social-links',
+      true
+    >;
+    BackgroundImage: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHeaderHeader extends Schema.SingleType {
   collectionName: 'headers';
   info: {
@@ -963,6 +999,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about.about': ApiAboutAbout;
+      'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
       'api::hero-banner.hero-banner': ApiHeroBannerHeroBanner;
       'api::my-skill.my-skill': ApiMySkillMySkill;
