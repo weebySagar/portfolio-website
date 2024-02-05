@@ -8,7 +8,7 @@ import "@/styles/hero-banner/_hero-banner.scss";
 async function getHeroDetails() {
   try {
     const response = await fetch(
-      "http://127.0.0.1:1337/api/hero-banner?populate=deep"
+      `${process.env.STRAPI_BACKEND_URL}/hero-banner?populate=deep`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch data in Hero Banner");

@@ -1,5 +1,3 @@
-// "use client";
-
 import React from "react";
 
 
@@ -9,7 +7,7 @@ import StackWrapper from "./StackWrapper";
 async function getSkillsDetails() {
   try {
     const response = await fetch(
-      "http://127.0.0.1:1337/api/my-skill?populate=deep"
+      `${process.env.STRAPI_BACKEND_URL}/my-skill?populate=deep`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch data in My Skill");
