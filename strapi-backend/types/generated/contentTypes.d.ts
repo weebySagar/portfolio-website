@@ -957,11 +957,11 @@ export interface ApiProjectProject extends Schema.CollectionType {
     ProjectName: Attribute.String & Attribute.Required;
     Image: Attribute.Media;
     Link: Attribute.String & Attribute.Required;
-    Description: Attribute.Text;
     TechnologyUsed: Attribute.Component<
       'technology-used.technology-used',
       true
     >;
+    Description: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

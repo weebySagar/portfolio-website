@@ -1,68 +1,63 @@
 @import "../global/theme-variables";
 
-.project-section{
+.project-section {
 
-    .project-slider{
+    .scroll-container {
+        position: fixed;
+        left: 0;
+        right: 0;
+        will-change: transform;
 
-        height: 250vh;
-
-        .sticky-div{
-            top: 30%;
-            position: sticky;
+        .ghost {
+            width: 100vw;
         }
-        .project-card{
-                width: 100%;
-                position: relative;
+    }
 
-                .mask{
-                    position: relative;
-                    background-color: rgba(255, 255, 255, 0.05);
-                    backdrop-filter: blur(3px);
-                    border-radius: 20px;
+    .project-container {
+        position: relative;
+        height: 100%;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
 
-                    &::before{
-                        position: absolute;
-                        content: '';
-                        inset: 0;
-                        background: linear-gradient(30deg, rgba(255, 255, 255, 0.1411764706) 60%, #9747FF);
-                        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-                        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-                        mask-composite: exclude;
-                        padding: 1px;
-                        border-radius: 20px;
+        
+    }
 
-                    }
-                }
-            .img-wrap{
-                // padding: 5px;
-                border-radius: 20px;
-                overflow: hidden;
-
-                img{
-                    border-radius: 20px;
-                }
-            }
-            p{
-                color: #CCC;
-            }
-
-            h5{
-                margin-top: $spacing-m;
-            }
-
-            .technology-wrapper{
-                margin-top: $spacing-m;
-                gap: 10px;
-                .tech-badge{
-                    display: flex;
-                    align-items: center;
-                    border: 2px dashed $color-2;
-                    padding: 4px 10px;
-                    border-radius: 8px;
-                    gap: 10px;
-                }
-            }
+    .projects {
+        position: relative;
+        display: flex;
+        .project {
+            width: 100vw;
+            height: 40vh;
         }
+    }
+
+    img{
+        border-radius: 20px
+    }
+    p,li {
+        color: #CCC;
+    }
+
+    h5 {
+        margin-top: $spacing-m;
+    }
+
+    .technology-wrapper {
+        margin-top: $spacing-m;
+        gap: 10px;
+
+        .tech-badge {
+            display: flex;
+            align-items: center;
+            border: 2px dashed $color-2;
+            padding: 4px 10px;
+            border-radius: 8px;
+            gap: 10px;
+        }
+    }
+
         .slick-slide{
             padding-left: 15px;
             padding-right: 15px;
@@ -86,16 +81,17 @@
                 left: 10px;
                 z-index: 1;
             }
+
         }
-    }
 }
 
-@media (max-width:991px){
+@media (max-width:991px) {
     .project-section{
-        .project-slider{
-            height: auto;
-            .sticky-div{
-                top: 100px;
+        .scroll-container{
+
+            .project{
+                height: 100% !important;
+                padding: 20px;
             }
         }
 
