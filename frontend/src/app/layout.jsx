@@ -14,7 +14,7 @@ import Footer from '@/components/footer/Footer';
 const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'My Portfolio',
+  title: "Sagar's Portfolio",
   description: 'See my Portfolio',
 }
 
@@ -22,8 +22,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        {/* <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-          crossOrigin="anonymous" /> */}
+    
+          <link rel="icon" href="/favicon.png" sizes="any" />
       </head>
       <body className={outfit.className}>
         <Header />
@@ -34,11 +34,6 @@ export default function RootLayout({ children }) {
         <ParticleComponent />
         <Footer/>
         {/* </SmoothScrolling> */}
-        {/* <Script strategy='afterInteractive' dangerouslySetInnerHTML={{__html:`"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"`}}/>
-        <Script strategy='afterInteractive' dangerouslySetInnerHTML={{__html:`"https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"`}}/>  */}
-        {/* <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossOrigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossOrigin="anonymous"></script>*/}
-
       </body>
     </html>
   )
