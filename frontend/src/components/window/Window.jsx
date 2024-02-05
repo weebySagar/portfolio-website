@@ -94,7 +94,7 @@ const Window = () => {
         <span>sagarmaurya814@gmail.com</span>
       </div>
       <div className="window-content">
-        <p>Hey there! We're excited to connect</p>
+        <p>Hey there! We&#39;re excited to connect</p>
         <p className="overflow-hidden text-nowrap">
           ----------------------------------------------------------------------------------------------------------
         </p>
@@ -147,7 +147,7 @@ const Window = () => {
         {field.length == 3 && (
           <>
             <div className="result">
-              <p>Beautiful! Here's what I got:</p>
+              <p>Beautiful! Here&#39;s what I got:</p>
               <p>
                 <span>name:</span> {field[0].value}
               </p>
