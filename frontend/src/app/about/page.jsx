@@ -3,14 +3,13 @@ import React from "react";
 import "@/styles/about/_about.scss";
 import Timeline from "@/components/timeline/Timeline";
 import Intro from "@/components/Intro/Intro";
-import { findValueByKey } from "@/utils/helper";
 import Academics from "@/components/academics/Academics";
 import Resume from "@/components/resume/Resume";
 
 async function getAboutDetails() {
   try {
     const response = await fetch(
-      "http://127.0.0.1:1337/api/abouts?populate=deep"
+      `${process.env.STRAPI_BACKEND_URL}/abouts?populate=deep`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch data in Projects");

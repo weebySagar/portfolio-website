@@ -6,7 +6,7 @@ import ProjectSlider from "./ProjectSlider";
 async function getProjectDetails() {
   try {
     const response = await fetch(
-      "http://127.0.0.1:1337/api/projects?populate=deep"
+      `${process.env.STRAPI_BACKEND_URL}/projects?populate=deep`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch data in Projects");
@@ -18,7 +18,7 @@ async function getProjectDetails() {
   }
 }
 
-const Project = async () => {
+export default async function Project () {
   const data = await getProjectDetails();
 
   return (
@@ -32,5 +32,3 @@ const Project = async () => {
     </section>
   );
 };
-
-export default Project;
