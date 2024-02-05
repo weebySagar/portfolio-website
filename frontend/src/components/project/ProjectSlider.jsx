@@ -23,7 +23,8 @@ const ProjectSlider = ({ data }) => {
     target: ref,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-250%"]);
+  const length = data.length * 83.33;
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", `-${length}%`]);
   return (
     <div className="project-slider" ref={ref}>
       <div className="d-none d-lg-flex align-items-center overflow-hidden sticky-div">
