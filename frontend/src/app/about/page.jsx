@@ -9,7 +9,12 @@ import Resume from "@/components/resume/Resume";
 async function getAboutDetails() {
   try {
     const response = await fetch(
-      `${process.env.STRAPI_BACKEND_URL}/abouts?populate=deep`
+      `${process.env.STRAPI_BACKEND_URL}/abouts?populate=deep`,
+      {
+        headers:{
+          Authorization:`Bearer ${process.env.STRAPI_TOKEN}`
+        }
+      }
     );
     if (!response.ok) {
       throw new Error("Failed to fetch data in Projects");

@@ -7,7 +7,12 @@ import StackWrapper from "./StackWrapper";
 async function getSkillsDetails() {
   try {
     const response = await fetch(
-      `${process.env.STRAPI_BACKEND_URL}/my-skill?populate=deep`
+      `${process.env.STRAPI_BACKEND_URL}/my-skill?populate=deep`,
+      {
+        headers:{
+          Authorization:`Bearer ${process.env.STRAPI_TOKEN}`
+        }
+      }
     );
     if (!response.ok) {
       throw new Error("Failed to fetch data in My Skill");

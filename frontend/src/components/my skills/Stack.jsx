@@ -48,7 +48,7 @@ const Stack = ({ onVote, children, ...props }) => {
     :
     <motion.div className="skills-message" initial={{opacity:0}} animate={{opacity:1}} transition={{duration:5}}>
       <div className="title-wrap">
-      <h3>"why settle for ordinary when you can code <span>extraordinary?</span>"</h3>
+      <h3>&quot;why settle for ordinary when you can code <span>extraordinary?</span>&quot;</h3>
 
       </div>
       <div className="button-wrap">

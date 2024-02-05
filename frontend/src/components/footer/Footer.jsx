@@ -8,7 +8,12 @@ import { findValueByKey } from "@/utils/helper";
 async function getFooterDetails() {
     try {
       const response = await fetch(
-        `${process.env.STRAPI_BACKEND_URL}/footer?populate=deep`
+        `${process.env.STRAPI_BACKEND_URL}/footer?populate=deep`,
+        {
+          headers:{
+            Authorization:`Bearer ${process.env.STRAPI_TOKEN}`
+          }
+        }
       );
       if (!response.ok) {
         throw new Error("Failed to fetch data in footer");

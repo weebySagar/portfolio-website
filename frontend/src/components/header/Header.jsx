@@ -11,7 +11,12 @@ import NavigationSocialLinks from "./NavigationSocialLinks";
 async function getHeader() {
   try {
     const response = await fetch(
-      "http://127.0.0.1:1337/api/header?populate=deep"
+      `${process.env.STRAPI_BACKEND_URL}/header?populate=deep`,
+      {
+        headers:{
+          Authorization:`Bearer ${process.env.STRAPI_TOKEN}`
+        }
+      }
     );
     if (!response.ok) {
       throw new Error("Failed to fetch data in header");
