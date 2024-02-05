@@ -8,9 +8,9 @@ async function getProjectDetails() {
     const response = await fetch(
       `${process.env.STRAPI_BACKEND_URL}/projects?populate=deep`,
       {
-        headers:{
-          Authorization:`Bearer ${process.env.STRAPI_TOKEN}`
-        }
+        headers: {
+          Authorization: `Bearer ${process.env.STRAPI_TOKEN}`,
+        },
       }
     );
     if (!response.ok) {
@@ -23,7 +23,7 @@ async function getProjectDetails() {
   }
 }
 
-export default async function Project () {
+export default async function Project() {
   const data = await getProjectDetails();
 
   return (
@@ -31,9 +31,11 @@ export default async function Project () {
       <div className="inner-wrap">
         <div className="container-fluid">
           <h1 className="ps-lg-3">Projects</h1>
-          <ProjectSlider data={data} />
+          <div className="content-wrap">
+            <ProjectSlider data={data} />
+          </div>
         </div>
       </div>
     </section>
   );
-};
+}

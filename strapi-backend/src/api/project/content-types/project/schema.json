@@ -28,14 +28,14 @@
       "type": "string",
       "required": true
     },
-    "Description": {
-      "type": "text"
-    },
     "TechnologyUsed": {
       "displayName": "Technology Used",
       "type": "component",
       "repeatable": true,
       "component": "technology-used.technology-used"
+    },
+    "Description": {
+      "type": "richtext"
     }
   }
 }
